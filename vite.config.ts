@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import path from "path";
 import { defineConfig } from "vite";
 import { defaultExclude } from "vitest/config";
 import react from "@vitejs/plugin-react";
@@ -6,6 +7,11 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   assetsInclude: ["**/*.md"],
   base: "https://giuzus.github.io/vite-react-boilerplate",
   test: {
@@ -13,7 +19,7 @@ export default defineConfig({
     setupFiles: "./src/test/setup.ts",
     exclude: [...defaultExclude],
     coverage: {
-      enabled: true,
+      enabled: false,
       exclude: ["src/main.tsx"],
       include: ["src/**/*.tsx"],
       provider: "v8",
