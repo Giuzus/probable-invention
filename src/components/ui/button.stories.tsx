@@ -31,6 +31,8 @@ const meta = {
     size: "default",
     children: "I am a button",
     onClick: fn(),
+    asChild: false,
+    disabled: false,
   },
 } satisfies Meta<typeof Button>;
 
