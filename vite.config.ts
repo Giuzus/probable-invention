@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   assetsInclude: ["**/*.md"],
-  base: "https://giuzus.github.io/vite-react-boilerplate",
+  base: "https://giuzus.github.io/probable-invention",
   test: {
     environment: "jsdom",
     setupFiles: "./src/test/setup.ts",
