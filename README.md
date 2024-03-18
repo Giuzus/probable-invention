@@ -18,5 +18,5 @@ To run the application::
 | `build`           | Builds the production bundle                 |
 | `lint`            | Runs ESLint to check for errors and warnings |
 | `test`            | Runs tests                                   |
-| `storybook`       | Runs storybook                               |
-| `build-storybook` | Builds storybook                             |
+| `storybook`       | Starts storybook                             |
+| `build-storybook` | Builds the storybook production bundle       |
