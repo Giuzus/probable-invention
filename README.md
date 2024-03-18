@@ -1,30 +1,22 @@
-# React Vite Tailwind Boilerplate
+# Probable invention
 
-This boilerplate provides a minimal setup to get started with React, Vite, and Tailwind CSS. It includes:
-
-- React
-- TypeScript
-- Tailwind CSS
-- Vite
-- Vitest
-- @testing-library/react
-- husky
-- Static page deployment
+This is a component library built using [shadcn/ui](https://ui.shadcn.com).
 
 ## Getting Started
 
-To get started with the boilerplate, follow these steps:
+To run the application::
 
 1. Clone the repository: `git clone https://github.com/user/vite-react-boilerplate.git`
 2. Install dependencies: `pnpm install`
-3. Init husky: `npx husky init`
-4. Start the development server: `pnpm dev`
+3. Start storybook server: `pnpm storybook`
 
 ## Available Scripts
 
-| Script  | Description                                  |
-| ------- | -------------------------------------------- |
-| `dev`   | Starts the Vite dev server                   |
-| `build` | Builds the production bundle                 |
-| `lint`  | Runs ESLint to check for errors and warnings |
-| `test`  | Runs tests                                   |
+| Script            | Description                                  |
+| ----------------- | -------------------------------------------- |
+| `dev`             | Starts the Vite dev server                   |
+| `build`           | Builds the production bundle                 |
+| `lint`            | Runs ESLint to check for errors and warnings |
+| `test`            | Runs tests                                   |
+| `storybook`       | Runs storybook                               |
+| `build-storybook` | Builds storybook                             |
