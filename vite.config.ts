@@ -3,14 +3,23 @@ import path, { resolve } from "path";
 import { defineConfig } from "vite";
 import { defaultExclude } from "vitest/config";
 import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      rollupTypes: true,
+      exclude: ["src/stories"],
+    }),
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.js"),
-      formats: ["es"],
+      name: "giuzus-probable-invention",
+      fileName: "giuzus-probable-invention",
+
+      entry: resolve(__dirname, "src/index.ts"),
     },
   },
   resolve: {
@@ -24,6 +33,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/test/setup.ts",
     exclude: [...defaultExclude],
+    passWithNoTests: true,
     coverage: {
       enabled: false,
       exclude: ["src/main.tsx"],
